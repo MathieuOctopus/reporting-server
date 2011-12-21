@@ -1304,13 +1304,17 @@
           <QueryParameter Name="TrackersId">
             <Value>=Parameters!TrackersId.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="DateId">
+            <Value>="[CreatedOn].[Date].&amp;[" + Format(CDate(Parameters!StartDate.Value), "yyyy-MM-dd") + "T00:00:00]" + ":[CreatedOn].[Date].&amp;[" + Format(CDate(Parameters!FinishDate.Value), "yyyy-MM-dd") + "T00:00:00]"</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT NON EMPTY { [Measures].[AvgDaysToResolve], [Measures].[AvgClientHours], [Measures].[AvgGmcsHours], [Measures].[ClientTimeRatio], [Measures].[IssueClosed], [Measures].[IssueOpened] } ON COLUMNS, 
        NON EMPTY { ([Projects].[Id].[Id].ALLMEMBERS * [Priorities].[Id].[Id].ALLMEMBERS ) } 
 DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
 FROM ( SELECT ( STRTOSET(@TrackersId, CONSTRAINED) ) ON COLUMNS 
 FROM ( SELECT ( STRTOSET(@ProjectsId, CONSTRAINED) ) ON COLUMNS 
-FROM ( SELECT ( STRTOSET("[CreatedOn].[Date].&amp;[2005-01-10T00:00:00]:[CreatedOn].[Date].&amp;[2011-01-10T00:00:00]") ) ON COLUMNS 
+FROM ( SELECT ( STRTOSET(@DateId) ) ON COLUMNS 
 FROM [Redmine Reports])))
 WHERE ( IIF( STRTOSET(@TrackersId, CONSTRAINED).Count = 1, STRTOSET(@TrackersId, CONSTRAINED), [Trackers].[Id].currentmember ) ) 
 CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
@@ -1727,6 +1731,14 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Начало периода</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FinishDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Окончание периода</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>
