@@ -6,7 +6,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.53125in</Width>
+              <Width>2.375in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.29167in</Width>
@@ -984,7 +984,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>0.36in</Top>
         <Height>0.64in</Height>
-        <Width>9.125in</Width>
+        <Width>9.96875in</Width>
         <Style />
       </Tablix>
       <Textbox Name="textbox1">
