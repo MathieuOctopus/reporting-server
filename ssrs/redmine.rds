@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="redmine">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=10.2.8.14;Initial Catalog=RedmineReports</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>40ff393d-fece-4ee7-b59e-f571cc8786bd</DataSourceID>
+</RptDataSource>
