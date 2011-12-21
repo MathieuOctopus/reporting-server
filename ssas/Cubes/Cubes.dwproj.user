@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Redmine Reports</Id>
+            <Name>Redmine Reports</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3T8Mh3Sj10SIagBt3RQ3UQAAAAAgAAAAUgBlAGQAbQBpAG4AZQAgAFIAZQBwAG8AcgB0AHMAAAAQZgAAAAEAACAAAADGJU5NA9vR5hyyM0TDdh4c+L2Rxyubscprr2yHcJG3jgAAAAAOgAAAAAIAACAAAAA55AhyGiC6dnXEiNZR5ODBFNxxLJg8xYrnit4BOwj97CAAAACZbF4pmka5BQejfVJWe+wqCNIgsqlutY+k6Mlmq8ofzUAAAAC3ULZMbBTzJQdq0JWZCtSZqPsAjXbEmCFOdwXb3s47h7RPY9m8tO75rQfP78/rF2THyNZi8EyWavGgx61DXZro</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Redmine Reports</Id>
+            <Name>Redmine Reports</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3T8Mh3Sj10SIagBt3RQ3UQAAAAAgAAAAUgBlAGQAbQBpAG4AZQAgAFIAZQBwAG8AcgB0AHMAAAAQZgAAAAEAACAAAACrfvKiONvFitcRI+KIhWtqPkLDTjzaLl5zq20Sypql4QAAAAAOgAAAAAIAACAAAACbCZUnNGRcqyW2+kh0op6ANe9QBlKHKRxZkl1hW1EDOiAAAACrDHvrosWnimalPm0rjsUai7QTbc3IJD48URtLEhVSnUAAAAA4jLMDAZdX2wyPaFAbSiBGgyqRB2ac3KSoPQzCMHoz2NM1qq3OFRhL1gnuLvT5oBofEWov23/Y2QEn9+KFnjIL</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>localhost</TargetServer>
+        <TargetDatabase>Cubes</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>
