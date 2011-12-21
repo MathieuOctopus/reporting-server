@@ -1710,7 +1710,7 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
   <ReportParameters>
     <ReportParameter Name="ProjectsId">
       <DataType>String</DataType>
-      <Prompt>Id</Prompt>
+      <Prompt>Проект</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>ProjectsId</DataSetName>
@@ -1722,7 +1722,7 @@ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, F
     </ReportParameter>
     <ReportParameter Name="TrackersId">
       <DataType>String</DataType>
-      <Prompt>Id</Prompt>
+      <Prompt>Трекер</Prompt>
       <ValidValues>
         <DataSetReference>
           <DataSetName>TrackersId</DataSetName>
