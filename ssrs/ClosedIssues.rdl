@@ -1817,7 +1817,7 @@ order by created_on desc</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>ClosedIssues</Value>
+                    <Value>Запросы, закрытые за период (отчет Иры)</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>20pt</FontSize>
