@@ -19,12 +19,24 @@
           <QueryParameter Name="@tracker_list">
             <Value>=Parameters!tracker_list.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@status_list">
+            <Value>=Parameters!status_list.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@startDate">
+            <Value>=Parameters!startDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@finishDate">
+            <Value>=Parameters!finishDate.Value</Value>
+          </QueryParameter>
         </QueryParameters>
         <CommandText>SELECT     issue_list.*
 FROM         issue_list
 where 
 project_name in (@project_list) and
-tracker_name in (@tracker_list)</CommandText>
+tracker_name in (@tracker_list) and
+status in (@status_list) and
+ created_on &gt;= @startDate and created_on &lt;= @finishDate
+order by created_on desc</CommandText>
       </Query>
       <Fields>
         <Field Name="id">
@@ -131,6 +143,17 @@ tracker_name in (@tracker_list)</CommandText>
     <DataSet Name="trackers">
       <SharedDataSet>
         <SharedDataSetReference>trackers</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="name">
+          <DataField>name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="statuses">
+      <SharedDataSet>
+        <SharedDataSetReference>statuses</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="name">
@@ -1861,6 +1884,32 @@ tracker_name in (@tracker_list)</CommandText>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="status_list">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>statuses</DataSetName>
+          <ValueField>name</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Статус</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>statuses</DataSetName>
+          <ValueField>name</ValueField>
+          <LabelField>name</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="startDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Начало периода</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="finishDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Завершение периода</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>
