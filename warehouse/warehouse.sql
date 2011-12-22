@@ -1,6 +1,6 @@
 ﻿USE [RedmineReports]
 GO
-/****** Object:  Table [dbo].[categories]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[categories] е   Script Date: 12/22/2011 11:27:18 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
