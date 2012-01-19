@@ -1,6 +1,6 @@
 ﻿USE [RedmineReports]
 GO
-/****** Object:  Table [dbo].[categories] е   Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[categories]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,7 +16,7 @@ CREATE TABLE [dbo].[categories](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[custom_values]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[custom_values]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -29,7 +29,7 @@ CREATE TABLE [dbo].[custom_values](
 	[value] [ntext] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[hours_cache]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[hours_cache]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -44,7 +44,7 @@ CREATE TABLE [dbo].[hours_cache](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[groups_users]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[groups_users]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -54,7 +54,7 @@ CREATE TABLE [dbo].[groups_users](
 	[user_id] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[projects]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[projects]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -78,7 +78,7 @@ CREATE TABLE [dbo].[projects](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[priorities]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[priorities]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -92,7 +92,7 @@ CREATE TABLE [dbo].[priorities](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[journals]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[journals]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -110,7 +110,7 @@ CREATE TABLE [dbo].[journals](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[statuses]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[statuses]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -124,7 +124,7 @@ CREATE TABLE [dbo].[statuses](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Time]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[Time]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -244,7 +244,7 @@ EXEC sys.sp_addextendedproperty @name=N'Project', @value=N'f3b65c51-1376-4f8a-bc
 GO
 EXEC sys.sp_addextendedproperty @name=N'AllowGen', @value=N'True' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Time', @level2type=N'CONSTRAINT',@level2name=N'PK_Time'
 GO
-/****** Object:  Table [dbo].[statuses_info]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[statuses_info]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -258,7 +258,7 @@ CREATE TABLE [dbo].[statuses_info](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  UserDefinedFunction [dbo].[DATEDIFFEXCLWEEKENDS]    Script Date: 12/22/2011 11:27:22 ******/
+/****** Object:  UserDefinedFunction [dbo].[DATEDIFFEXCLWEEKENDS]    Script Date: 01/19/2012 11:32:20 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -282,7 +282,7 @@ AS
 		RETURN(@result)			
 	END
 GO
-/****** Object:  Table [dbo].[IssuesTime]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[IssuesTime]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -294,7 +294,7 @@ CREATE TABLE [dbo].[IssuesTime](
 	[DaysActive] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[IssuesInformation]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[IssuesInformation]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -311,7 +311,7 @@ CREATE TABLE [dbo].[IssuesInformation](
 	[ClosingDate] [datetime] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[users]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[users]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -330,7 +330,7 @@ CREATE TABLE [dbo].[users](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[trackers]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[trackers]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -347,7 +347,7 @@ CREATE TABLE [dbo].[trackers](
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[working_hours]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[working_hours]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -357,7 +357,7 @@ CREATE TABLE [dbo].[working_hours](
 	[mode] [int] NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[users_list]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[users_list]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -367,7 +367,7 @@ AS
 	SELECT * FROM users WHERE id NOT IN
 		(SELECT group_id FROM groups_users)
 GO
-/****** Object:  StoredProcedure [dbo].[users_by_group]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[users_by_group]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -379,7 +379,7 @@ SET NOCOUNT ON
 SELECT * FROM users WHERE id IN 
 	(SELECT user_id FROM groups_users WHERE group_id = @group)
 GO
-/****** Object:  UserDefinedFunction [dbo].[TIMEDIFFEXCLWEEKENDS]    Script Date: 12/22/2011 11:27:22 ******/
+/****** Object:  UserDefinedFunction [dbo].[TIMEDIFFEXCLWEEKENDS]    Script Date: 01/19/2012 11:32:20 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -397,7 +397,7 @@ AS
 		RETURN(@result)			
 	END
 GO
-/****** Object:  View [dbo].[user_groups]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[user_groups]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -407,7 +407,7 @@ AS
 	SELECT * FROM users WHERE id IN
 		(SELECT group_id FROM groups_users)
 GO
-/****** Object:  Table [dbo].[issues]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[issues]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -442,13 +442,14 @@ CREATE TABLE [dbo].[issues](
 	[module] [ntext] NULL,
 	[functionality] [ntext] NULL,
 	[periodfinish_and_close] [int] NULL,
+	[created_on_2] [datetime] NULL,
  CONSTRAINT [PK_issues] PRIMARY KEY CLUSTERED 
 (
 	[pk] ASC
 )WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[journal_details]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  Table [dbo].[journal_details]    Script Date: 01/19/2012 11:32:16 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -463,7 +464,7 @@ CREATE TABLE [dbo].[journal_details](
 	[value_int] [int] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  StoredProcedure [dbo].[fill_default_statuses]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[fill_default_statuses]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -485,7 +486,7 @@ insert into statuses_info values('Выполнено', 1);
 
 insert into statuses_info values('Приостановлено', 0);
 GO
-/****** Object:  StoredProcedure [dbo].[create_working_hours]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[create_working_hours]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -522,7 +523,7 @@ begin
 	set @currentPoint = DATEADD(dd, 1, @currentPoint)	
 end
 GO
-/****** Object:  StoredProcedure [dbo].[create_stub_user]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[create_stub_user]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -533,7 +534,7 @@ AS
 	DELETE FROM users WHERE users.id = 0;
 	INSERT INTO users VALUES(0, 'unassigned', 'unassigned', 'unassigned', '', 0, 'unassigned')
 GO
-/****** Object:  StoredProcedure [dbo].[create_stub_categories]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[create_stub_categories]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -545,7 +546,7 @@ AS
 	INSERT INTO categories 
 		SELECT 0 AS ID, id AS project_id, 'Не назначено' AS name  FROM projects
 GO
-/****** Object:  StoredProcedure [dbo].[clear_all_tables]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[clear_all_tables]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -564,7 +565,7 @@ AS
 	DELETE FROM journals;
 	DELETE FROM custom_values;
 GO
-/****** Object:  View [dbo].[statuses_history]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[statuses_history]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -580,7 +581,7 @@ where journals.id = journal_details.journal_id
 and prop_key = 'status_id'
 and journal_details.value_int = statuses.id
 GO
-/****** Object:  View [dbo].[issue_list]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[issue_list]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -604,6 +605,7 @@ SELECT
    issues.estimated_hours, 
    issues.done_ratio, 
    issues.created_on,
+   issues.created_time,
    issues.payment,
    issues.old_scr_id,
    issues.days_to_resolve,
@@ -632,7 +634,7 @@ WHERE
     AND
   issues.periodstart = 0
 GO
-/****** Object:  StoredProcedure [dbo].[set_days_to_resolve]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[set_days_to_resolve]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -640,10 +642,10 @@ GO
 CREATE PROCEDURE [dbo].[set_days_to_resolve]
 AS
 	SET NOCOUNT ON;      
-	UPDATE issues SET days_to_resolve = dbo.DATEDIFFEXCLWEEKENDS(start_date, updated_on) where periodfinish = 1;
+	UPDATE issues SET days_to_resolve = dbo.DATEDIFFEXCLWEEKENDS(DATEADD(dd, 0, DATEDIFF(dd, 0, created_time)), updated_on) where periodfinish = 1;
 	UPDATE issues SET days_to_resolve = 0 where periodfinish = 0;
 GO
-/****** Object:  StoredProcedure [dbo].[set_custom_values]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[set_custom_values]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -684,7 +686,7 @@ AS
 
 	UPDATE issues SET functionality = '' where functionality IS NULL;
 GO
-/****** Object:  StoredProcedure [dbo].[data_purify]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[data_purify]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -693,6 +695,7 @@ CREATE PROCEDURE [dbo].[data_purify]
 AS
 	SET NOCOUNT ON;      
 	UPDATE issues SET created_on = DATEADD(dd, 0, DATEDIFF(dd, 0, created_on));      
+	UPDATE issues SET created_on_2 = DATEADD(dd, 0, DATEDIFF(dd, 0, created_on_2));      
 	UPDATE issues SET updated_on = DATEADD(dd, 0, DATEDIFF(dd, 0, updated_on));      
 	UPDATE issues SET start_date = DATEADD(dd, 0, DATEDIFF(dd, 0, start_date));  
 	UPDATE issues SET estimated_hours = 0 WHERE estimated_hours IS NULL;    
@@ -704,7 +707,7 @@ AS
 	UPDATE issues SET periodfinish_and_close = 0
 		WHERE periodfinish_and_close = 1 AND done_ratio < 100
 GO
-/****** Object:  StoredProcedure [dbo].[refresh_hours_cache]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[refresh_hours_cache]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -716,7 +719,7 @@ delete from hours_cache;
 insert into hours_cache
 	select id, client_hours,gmcs_hours from issues where periodfinish = 1 and status_id = 2 and client_hours is not null;
 GO
-/****** Object:  View [dbo].[real_close_dates]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[real_close_dates]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -728,7 +731,7 @@ AS
   FROM statuses_history 
   WHERE new_status = 'Закрыто'
 GO
-/****** Object:  StoredProcedure [dbo].[set_hours_per_issue]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[set_hours_per_issue]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -788,7 +791,7 @@ as
     update issues set client_hours = 0 where id = @issue_id and periodfinish = 0
 	update issues set gmcs_hours = 0 where id = @issue_id and periodfinish = 0
 GO
-/****** Object:  StoredProcedure [dbo].[set_hours]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[set_hours]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -826,7 +829,7 @@ end
 
 deallocate icursor;
 GO
-/****** Object:  View [dbo].[report_close_dates]    Script Date: 12/22/2011 11:27:19 ******/
+/****** Object:  View [dbo].[report_close_dates]    Script Date: 01/19/2012 11:32:17 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -838,7 +841,7 @@ AS
 	LEFT OUTER JOIN real_close_dates
 	ON issues.id = real_close_dates.id
 GO
-/****** Object:  StoredProcedure [dbo].[set_close_date]    Script Date: 12/22/2011 11:27:21 ******/
+/****** Object:  StoredProcedure [dbo].[set_close_date]    Script Date: 01/19/2012 11:32:19 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -852,55 +855,55 @@ AS
 			WHERE issues.id = report_close_dates.id and
 				issues.periodfinish  =1
 GO
-/****** Object:  ForeignKey [FK_issues_categories]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_categories]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_categories] FOREIGN KEY([category_id], [project_id])
 REFERENCES [dbo].[categories] ([id], [project_id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_categories]
 GO
-/****** Object:  ForeignKey [FK_issues_priorities]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_priorities]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_priorities] FOREIGN KEY([priority_id])
 REFERENCES [dbo].[priorities] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_priorities]
 GO
-/****** Object:  ForeignKey [FK_issues_projects]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_projects]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_projects] FOREIGN KEY([project_id])
 REFERENCES [dbo].[projects] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_projects]
 GO
-/****** Object:  ForeignKey [FK_issues_statuses]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_statuses]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_statuses] FOREIGN KEY([status_id])
 REFERENCES [dbo].[statuses] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_statuses]
 GO
-/****** Object:  ForeignKey [FK_issues_Time]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_Time]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_Time] FOREIGN KEY([created_on])
 REFERENCES [dbo].[Time] ([PK_Date])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_Time]
 GO
-/****** Object:  ForeignKey [FK_issues_trackers]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_trackers]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_trackers] FOREIGN KEY([tracker_id])
 REFERENCES [dbo].[trackers] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_trackers]
 GO
-/****** Object:  ForeignKey [FK_issues_users]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_users]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_users] FOREIGN KEY([author_id])
 REFERENCES [dbo].[users] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_users]
 GO
-/****** Object:  ForeignKey [FK_issues_users1]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_issues_users1]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[issues]  WITH NOCHECK ADD  CONSTRAINT [FK_issues_users1] FOREIGN KEY([assigned_to_id])
 REFERENCES [dbo].[users] ([id])
 GO
 ALTER TABLE [dbo].[issues] CHECK CONSTRAINT [FK_issues_users1]
 GO
-/****** Object:  ForeignKey [FK_journal_details_journals]    Script Date: 12/22/2011 11:27:18 ******/
+/****** Object:  ForeignKey [FK_journal_details_journals]    Script Date: 01/19/2012 11:32:16 ******/
 ALTER TABLE [dbo].[journal_details]  WITH NOCHECK ADD  CONSTRAINT [FK_journal_details_journals] FOREIGN KEY([journal_id])
 REFERENCES [dbo].[journals] ([id])
 GO
