@@ -327,6 +327,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -364,6 +365,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -401,6 +403,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -438,6 +441,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -475,6 +479,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -512,6 +517,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -549,6 +555,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -586,6 +593,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -623,6 +631,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -660,6 +669,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -699,7 +709,6 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -1165,6 +1174,11 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
     </ReportParameter>
     <ReportParameter Name="display_closed">
       <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
       <Prompt>Показывать закрытые</Prompt>
     </ReportParameter>
   </ReportParameters>
