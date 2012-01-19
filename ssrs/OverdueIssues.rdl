@@ -30,6 +30,8 @@
 FROM         issue_list
 where days_to_resolve &gt; days_to_resolve_by_contract and
 project_name not like 'BOSS%' and
+project_name not like 'УСО%' and
+project_name not like 'Redmine%' and
 project_name in (@project_list) and
 priority in (@priorities_list) and
 tracker_name in (@tracker_list) and
@@ -256,31 +258,31 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.69792in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.96875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.09375in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.92708in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.75in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>3.33333in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.5625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.90625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>0.89583in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1in</Width>
@@ -302,14 +304,13 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   <Value>id</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -337,16 +338,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>project name</Value>
+                                  <Value>проект</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox3</rd:DefaultName>
@@ -373,16 +375,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>tracker name</Value>
+                                  <Value>трекер</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox4</rd:DefaultName>
@@ -409,16 +412,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>priority</Value>
+                                  <Value>приоритет</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox5</rd:DefaultName>
@@ -445,16 +449,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>status</Value>
+                                  <Value>статус</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox6</rd:DefaultName>
@@ -481,16 +486,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>subject</Value>
+                                  <Value>тема</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox7</rd:DefaultName>
@@ -517,16 +523,17 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>aggigned</Value>
+                                  <Value>назначено</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>textbox8</rd:DefaultName>
@@ -553,17 +560,16 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>days to resolve</Value>
+                                  <Value>фактически</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -591,17 +597,16 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>days to resolve by contract</Value>
+                                  <Value>по договору</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -629,17 +634,16 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>done ratio</Value>
+                                  <Value>% завершения</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                     <Color>White</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -678,7 +682,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>id</rd:DefaultName>
@@ -693,6 +699,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -710,7 +717,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>project_name</rd:DefaultName>
@@ -742,7 +751,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>tracker_name</rd:DefaultName>
@@ -774,7 +785,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>priority</rd:DefaultName>
@@ -806,7 +819,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>status</rd:DefaultName>
@@ -870,7 +885,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>aggigned</rd:DefaultName>
@@ -902,7 +919,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>days_to_resolve</rd:DefaultName>
@@ -934,7 +953,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>days_to_resolve_by_contract</rd:DefaultName>
@@ -966,7 +987,9 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>done_ratio</rd:DefaultName>
@@ -1010,6 +1033,15 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
                 </TablixMember>
                 <TablixMember>
                   <Group Name="table1_Details_Group">
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!done_ratio.Value</FilterExpression>
+                        <Operator>LessThan</Operator>
+                        <FilterValues>
+                          <FilterValue>=IIf(Parameters!display_closed.Value = True, 101, 99)</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
                     <DataElementName>Detail</DataElementName>
                   </Group>
                   <TablixMembers>
@@ -1024,7 +1056,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.36in</Top>
             <Height>0.43in</Height>
-            <Width>10in</Width>
+            <Width>13.13542in</Width>
             <Style />
           </Tablix>
           <Textbox Name="textbox1">
@@ -1034,7 +1066,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>OverdueIssues</Value>
+                    <Value>Просроченные запросы</Value>
                     <Style>
                       <FontFamily>Tahoma</FontFamily>
                       <FontSize>20pt</FontSize>
@@ -1061,7 +1093,7 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
         <Height>0.79in</Height>
         <Style />
       </Body>
-      <Width>10in</Width>
+      <Width>13.33333in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
@@ -1130,6 +1162,10 @@ order by (days_to_resolve - days_to_resolve_by_contract) desc</CommandText>
         </DataSetReference>
       </ValidValues>
       <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="display_closed">
+      <DataType>Boolean</DataType>
+      <Prompt>Показывать закрытые</Prompt>
     </ReportParameter>
   </ReportParameters>
   <Language>en-US</Language>
