@@ -29,6 +29,7 @@
         <CommandText>select top 50 * from issue_list
 where status &lt;&gt; 'Закрыто' and
 project_name not like 'BOSS%'
+and project_name not like 'УСО%'
 and project_name in (@project_list)
 and priority in (@priorities_list)
 and aggigned in (@users_list)
@@ -119,6 +120,10 @@ order by days_to_resolve desc</CommandText>
         </Field>
         <Field Name="client_hours">
           <DataField>client_hours</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="days_to_resolve_by_contract">
+          <DataField>days_to_resolve_by_contract</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="gmcs_hours">
