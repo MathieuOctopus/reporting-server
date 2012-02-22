@@ -1022,7 +1022,22 @@
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>OLAP</DataSourceName>
-        <CommandText>SELECT NON EMPTY { [Measures].[AvgDaysToResolve], [Measures].[AvgClientHours], [Measures].[AvgGmcsHours], [Measures].[ClientTimeRatio], [Measures].[IssueClosed], [Measures].[IssueOpened] } ON COLUMNS, NON EMPTY { ([Assigned To].[Id].[Id].ALLMEMBERS * [Priorities].[Id].[Id].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [Redmine Reports] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <QueryParameters>
+          <QueryParameter Name="createdOnDate">
+            <Value>="[CreatedOn].[Date].&amp;[" +
+  Format(CDate(Parameters!StartDate.Value), "yyyy-MM-dd") +
+  "T00:00:00]" +
+ 
+  ":[CreatedOn].[Date].&amp;[" +
+  Format(CDate(Parameters!FinishDate.Value), "yyyy-MM-dd") +
+  "T00:00:00]"</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT NON EMPTY { [Measures].[AvgDaysToResolve], [Measures].[AvgClientHours], [Measures].[AvgGmcsHours], [Measures].[ClientTimeRatio], [Measures].[IssueClosed], [Measures].[IssueOpened] } ON COLUMNS, 
+NON EMPTY { ([Assigned To].[Id].[Id].ALLMEMBERS * [Priorities].[Id].[Id].ALLMEMBERS ) }  ON ROWS 
+FROM (SELECT (STRTOSET(@createdOnDate) ) ON COLUMNS
+       FROM [Redmine Reports])</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -1200,6 +1215,16 @@
       </Fields>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Начало периода:</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="FinishDate">
+      <DataType>DateTime</DataType>
+      <Prompt>Окончание периода</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Language>en-US</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
