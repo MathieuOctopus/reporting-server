@@ -368,6 +368,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -656,6 +657,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -926,6 +928,15 @@
                 <GroupExpressions>
                   <GroupExpression>=Fields!Id.Value</GroupExpression>
                 </GroupExpressions>
+                <Filters>
+                  <Filter>
+                    <FilterExpression>=(Fields!IssueOpened.Value &gt; 0) OR (Fields!IssueOpened.Value &gt; 0)</FilterExpression>
+                    <Operator>Equal</Operator>
+                    <FilterValues>
+                      <FilterValue DataType="Boolean">true</FilterValue>
+                    </FilterValues>
+                  </Filter>
+                </Filters>
               </Group>
               <SortExpressions>
                 <SortExpression>
@@ -942,6 +953,15 @@
                     <GroupExpressions>
                       <GroupExpression>=Fields!Id2.Value</GroupExpression>
                     </GroupExpressions>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=(Fields!IssueOpened.Value&gt;0) OR (Fields!IssueClosed.Value&gt;0)</FilterExpression>
+                        <Operator>Equal</Operator>
+                        <FilterValues>
+                          <FilterValue DataType="Boolean">=True</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
